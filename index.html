@@ -115,7 +115,8 @@
     .mentor-info ul { list-style: none; font-size: 14px; color: var(--gray-700); line-height: 2; }
 
     /* Evaluation */
-    .eval-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 20px; max-width: 960px; margin: 0 auto; }
+    .eval-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 16px; max-width: 1100px; margin: 0 auto; }
+    @media (max-width: 968px) { .eval-grid { grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); } }
     .eval-card { text-align: center; padding: 32px 20px; background: var(--navy-light); border-radius: var(--radius); border: 1px solid var(--blue-border); transition: var(--transition); }
     .eval-card:hover { border-color: var(--blue-accent); box-shadow: 0 4px 20px var(--blue-glow); transform: translateY(-4px); }
     .eval-pct { font-size: 42px; font-weight: 800; color: var(--primary); margin-bottom: 8px; }
@@ -137,7 +138,9 @@
     .scoring-table .total-row .score { font-size: 24px; }
 
     /* Awards */
-    .awards-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 20px; max-width: 1000px; margin: 0 auto; }
+    .awards-grid { display: flex; flex-wrap: wrap; gap: 16px; justify-content: center; max-width: 1000px; margin: 0 auto; }
+    .awards-grid .award-card { flex: 0 0 calc(33.33% - 11px); max-width: calc(33.33% - 11px); }
+    @media (max-width: 768px) { .awards-grid .award-card { flex: 0 0 calc(50% - 8px); max-width: calc(50% - 8px); } }
     .award-card { text-align: center; padding: 32px 20px; background: var(--navy-light); border-radius: var(--radius); border: 1px solid var(--blue-border); transition: var(--transition); }
     .award-card:hover { border-color: var(--blue-accent); box-shadow: 0 4px 20px var(--blue-glow); transform: translateY(-4px); }
     .award-card.gold { border-color: #FFD700; background: linear-gradient(135deg, rgba(255,215,0,0.08) 0%, rgba(255,215,0,0.02) 100%); }
@@ -161,7 +164,9 @@
     .faq-answer-inner { padding: 0 24px 20px; font-size: 15px; color: var(--gray-700); line-height: 1.7; }
 
     /* Downloads */
-    .download-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; max-width: 900px; margin: 0 auto; }
+    .download-grid { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; max-width: 900px; margin: 0 auto; }
+    .download-grid .download-item { flex: 0 0 calc(33.33% - 10px); max-width: calc(33.33% - 10px); }
+    @media (max-width: 768px) { .download-grid .download-item { flex: 0 0 calc(50% - 7px); max-width: calc(50% - 7px); } }
     .download-item { display: flex; align-items: center; gap: 16px; padding: 20px; background: var(--navy-light); border-radius: var(--radius); border: 1px solid var(--blue-border); transition: var(--transition); cursor: pointer; }
     .download-item:hover { border-color: var(--blue-accent); box-shadow: 0 4px 16px var(--blue-glow); }
     .download-icon { width: 48px; height: 48px; border-radius: 12px; background: var(--blue-glow); border: 1px solid var(--blue-border); display: flex; align-items: center; justify-content: center; font-size: 22px; flex-shrink: 0; }
@@ -398,7 +403,7 @@
       <div class="section-header" style="margin-bottom:24px;">
         <h3 style="font-size:20px; color:white;">📋 参赛模板</h3>
       </div>
-      <div class="download-grid" style="justify-items:center; max-width:320px;">
+      <div class="download-grid" style="max-width:400px;">
         <a href="https://mi.feishu.cn/file/VzW6bjk9Wog3k3xE5jgc7fa3nfe" target="_blank" class="download-item"><div class="download-icon">📝</div><div class="download-info"><h4>产品创新大赛PPT模板</h4><p>统一模板，请按此格式准备参赛材料</p></div></a>
       </div>
 
