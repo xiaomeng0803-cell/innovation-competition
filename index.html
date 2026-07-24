@@ -63,13 +63,16 @@
     .about-features li::before { content: '✓'; color: var(--blue-accent); font-weight: 700; font-size: 13px; }
 
 
-    /* Cards */
-    .cards-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; }
-    .card { background: var(--navy-light); border-radius: var(--radius); padding: 28px; border: 1px solid var(--blue-border); transition: var(--transition); }
-    .card:hover { border-color: var(--blue-accent); box-shadow: 0 4px 20px var(--blue-glow); transform: translateY(-4px); }
-    .card-icon { width: 52px; height: 52px; border-radius: 14px; display: flex; align-items: center; justify-content: center; font-size: 24px; margin-bottom: 16px; background: var(--blue-glow); border: 1px solid var(--blue-border); }
-    .card h3 { font-size: 18px; font-weight: 700; margin-bottom: 10px; color: white; }
-    .card p { font-size: 14px; color: var(--gray-500); line-height: 1.7; }
+    /* Cards - compact symmetrical grid */
+    .cards-grid { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; }
+    .cards-grid .card { flex: 0 0 calc(25% - 11px); max-width: calc(25% - 11px); }
+    .card { background: var(--navy-light); border-radius: var(--radius); padding: 20px 16px; border: 1px solid var(--blue-border); transition: var(--transition); box-sizing: border-box; }
+    .card:hover { border-color: var(--blue-accent); box-shadow: 0 4px 20px var(--blue-glow); transform: translateY(-3px); }
+    .card-icon { width: 42px; height: 42px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 20px; margin-bottom: 10px; background: var(--blue-glow); border: 1px solid var(--blue-border); }
+    .card h3 { font-size: 15px; font-weight: 700; margin-bottom: 8px; color: white; }
+    .card p { font-size: 13px; color: var(--gray-500); line-height: 1.6; }
+    @media (max-width: 968px) { .cards-grid .card { flex: 0 0 calc(50% - 7px); max-width: calc(50% - 7px); } }
+    @media (max-width: 480px) { .cards-grid .card { flex: 0 0 100%; max-width: 100%; } }
 
     /* Timeline */
     .timeline { position: relative; max-width: 800px; margin: 0 auto; }
@@ -258,11 +261,10 @@
         <div class="card"><div class="card-icon">👶</div><h3>母婴家庭照护场景</h3><p>关注新手爸妈的育儿痛点，设计智能温控、空气质量监测、辅食存储等全屋联动方案。</p></div>
         <div class="card"><div class="card-icon">🧓</div><h3>银发家庭适老化场景</h3><p>围绕老年人居家安全与便利，设计健康监测、跌倒预警、环境自适应等智能关怀方案。</p></div>
         <div class="card"><div class="card-icon">🐾</div><h3>养宠家庭生活场景</h3><p>解决宠物主人的日常困扰，设计喂食、温控、清洁、远程看护等智能化方案。</p></div>
-        <div class="card"><div class="card-icon">🌧️</div><h3>回南天/梅雨季管理场景</h3><p>应对潮湿天气痛点，设计除湿、烘干、防霉、衣物护理等设备协同方案。</p></div>
         <div class="card"><div class="card-icon">🏡</div><h3>年轻人第一套公寓场景</h3><p>面向年轻用户，打造高性价比、高颜值、易上手的全屋智能入门方案。</p></div>
         <div class="card"><div class="card-icon">🚗</div><h3>人车家联动场景</h3><p>打通手机、汽车与家居设备，实现离家/回家自动联动、远程控制等无缝体验。</p></div>
-        <div class="card"><div class="card-icon">📡</div><h3>全屋人感相关场景</h3><p>利用人体传感器与AI，实现有人/无人自动调节、区域联动、节能优化等智能场景。</p></div>
         <div class="card"><div class="card-icon">❤️</div><h3>家庭健康守护/安全监测</h3><p>聚焦大健康场景，设计空气、水质、睡眠、环境监测与主动健康管理方案。</p></div>
+        <div class="card"><div class="card-icon">📡</div><h3>全屋人感相关场景</h3><p>利用人体传感器与AI，实现有人/无人自动调节、区域联动、节能优化等智能场景。</p></div>
       </div>
       <div style="margin-top:48px;">
         <div class="info-box">
