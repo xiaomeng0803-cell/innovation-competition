@@ -174,6 +174,20 @@
     .download-info h4 { font-size: 15px; font-weight: 700; color: white; }
     .download-info p { font-size: 12px; color: var(--gray-500); margin-top: 2px; }
 
+    /* News */
+    .news-list { max-width: 900px; margin: 0 auto; }
+    .news-item { display: flex; gap: 20px; padding: 22px 24px; background: var(--navy-light); border-radius: var(--radius); border: 1px solid var(--blue-border); margin-bottom: 14px; transition: var(--transition); cursor: pointer; align-items: flex-start; }
+    .news-item:hover { border-color: var(--blue-accent); box-shadow: 0 4px 16px var(--blue-glow); transform: translateY(-2px); }
+    .news-date { flex-shrink: 0; text-align: center; min-width: 60px; }
+    .news-date .day { font-size: 28px; font-weight: 800; color: var(--primary); line-height: 1; }
+    .news-date .month { font-size: 13px; color: var(--gray-500); margin-top: 4px; }
+    .news-content { flex: 1; min-width: 0; }
+    .news-tag { display: inline-block; font-size: 11px; font-weight: 700; color: var(--primary); background: rgba(255,107,0,0.12); padding: 3px 10px; border-radius: 20px; margin-bottom: 8px; letter-spacing: 0.5px; }
+    .news-title { font-size: 17px; font-weight: 700; color: white; margin-bottom: 6px; line-height: 1.4; }
+    .news-summary { font-size: 14px; color: var(--gray-700); line-height: 1.6; }
+    .news-link { font-size: 13px; color: var(--blue-accent); font-weight: 600; margin-top: 8px; display: inline-block; }
+    .news-empty { text-align: center; padding: 48px 24px; color: var(--gray-500); font-size: 15px; }
+
     /* Info box */
     .info-box { padding: 24px 32px; background: var(--navy-light); border-radius: var(--radius); border-left: 4px solid var(--blue-accent); max-width: 900px; margin: 0 auto; }
     .info-box h3 { font-size: 18px; font-weight: 700; margin-bottom: 16px; color: white; }
@@ -219,6 +233,7 @@
       <nav class="nav" id="nav">
         <a href="#home" class="active">首页</a>
         <a href="#about">大赛介绍</a>
+        <a href="#news">赛事快报</a>
         <a href="#scenarios">命题场景</a>
         <a href="#schedule">赛程安排</a>
         <a href="#mentors">导师团队</a>
@@ -253,6 +268,20 @@
         </ul>
       </div>
 
+    </div>
+  </section>
+
+  <!-- News -->
+  <section class="section section-dark" id="news">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge">赛事快报</div>
+        <h2>📢 最新动态</h2>
+        <p>赛事最新消息与重要通知，记得常来看看哦～</p>
+      </div>
+      <div class="news-list">
+        <div class="news-empty">🚀 赛事快报即将发布，敬请期待！</div>
+      </div>
     </div>
   </section>
 
