@@ -280,7 +280,7 @@
         <p>赛事最新消息与重要通知，记得常来看看哦～</p>
       </div>
       <div class="news-list">
-        <div class="news-item" onclick="openNewsModal('news/01-poster.png')">
+        <a href="news/01.html" class="news-item" style="text-decoration:none;">
           <div class="news-date">
             <div class="day">04</div>
             <div class="month">8月</div>
@@ -289,17 +289,10 @@
             <span class="news-tag">🔥 组队启动</span>
             <div class="news-title">全屋智能产品大赛组队正式开启！</div>
             <div class="news-summary">本周五下午六点前完成组队，敲定队名并选择导师。每组5人，鼓励跨四级部门组队，跨3个部门每人积3分，跨5个部门每人积5分。</div>
-            <a class="news-link">查看完整海报 →</a>
+            <span class="news-link">阅读全文 →</span>
           </div>
-        </div>
+        </a>
       </div>
-      <!-- News Modal -->
-      <div id="newsModal" style="display:none;position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,0.85);backdrop-filter:blur(8px);cursor:pointer;" onclick="this.style.display='none'">
-        <div style="display:flex;align-items:center;justify-content:center;height:100%;padding:24px;">
-          <img id="newsModalImg" src="" style="max-width:90%;max-height:90%;border-radius:12px;box-shadow:0 8px 32px rgba(0,0,0,0.5);">
-        </div>
-      </div>
-      <script>function openNewsModal(src){document.getElementById('newsModalImg').src=src;document.getElementById('newsModal').style.display='block';}</script>
     </div>
   </section>
 
